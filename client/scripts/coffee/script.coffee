@@ -14,7 +14,7 @@ App.rootElement = $('#card-table')[0]
 # Loop through players and hands for card display
 # <% %> ERB-style delimiters
 # underscore's _.each function: http://underscorejs.org/#each
-App.views = "
+App.view = "
     <% _.each(hands, function(hand, player) { %>
       <div class='well span5'>
         <h2>Player <%= player + 1 %></h2>
@@ -50,10 +50,11 @@ $ ->
       # Make sure the table is clear
       $(App.rootElement).empty()
 
+      # Log the AJAX response
       log hands
       
       # Underscore templating: http://underscorejs.org/#template
-      table = _.template(App.views, {hands : hands})
+      table = _.template(App.view, {hands : hands})
   
       # Go!
       $(App.rootElement).append(table)
