@@ -14,13 +14,13 @@
       language = $('#choose-language').val();
       players = $('#choose-players').val();
       url = 'http://' + language + '.benyarbrough.com/playing-cards/api/' + players;
-      return $.getJSON(url, function(hands) {
+      $.getJSON(url, function(hands) {
         var table;
         $(App.rootElement).empty();
         table = _.template(App.rootElement, {
           hands: hands
         });
-        return $(App.rootElement).append(table);
+        $(App.rootElement).append(table);
       });
     });
   });

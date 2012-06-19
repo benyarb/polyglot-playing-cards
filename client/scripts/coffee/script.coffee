@@ -41,7 +41,7 @@ $ ->
   $('#play').click ->
     language = $('#choose-language').val()
     players = $('#choose-players').val()
-    
+
     
     # Concat api url
     url = 'http://' + language + '.benyarbrough.com/playing-cards/api/' + players
@@ -55,3 +55,6 @@ $ ->
   
       # Go!
       $(App.rootElement).append(table)
+
+      return
+    return
