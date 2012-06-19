@@ -13,7 +13,7 @@
       var language, players, url;
       language = $('#choose-language').val();
       players = $('#choose-players').val();
-      url = language + '.benyarbrough.com/playing-cards/api/' + players;
+      url = 'http://' + language + '.benyarbrough.com/playing-cards/api/' + players;
       return $.getJSON(url, function(hands) {
         var table;
         $(App.rootElement).empty();

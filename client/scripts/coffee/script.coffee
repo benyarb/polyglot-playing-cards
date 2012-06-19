@@ -43,7 +43,7 @@ $ ->
     players = $('#choose-players').val()
     
     # Concat api url
-    url = language + '.benyarbrough.com/playing-cards/api/' + players
+    url = 'http://' + language + '.benyarbrough.com/playing-cards/api/' + players
 
     $.getJSON url, (hands) ->
       # Make sure the table is clear
