@@ -49,6 +49,8 @@ $ ->
     $.getJSON url, (hands) ->
       # Make sure the table is clear
       $(App.rootElement).empty()
+
+      log hands
       
       # Underscore templating: http://underscorejs.org/#template
       table = _.template(App.views, {hands : hands})

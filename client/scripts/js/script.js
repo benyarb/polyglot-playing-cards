@@ -17,6 +17,7 @@
       $.getJSON(url, function(hands) {
         var table;
         $(App.rootElement).empty();
+        log(hands);
         table = _.template(App.views, {
           hands: hands
         });
