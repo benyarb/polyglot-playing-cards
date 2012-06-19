@@ -6,7 +6,7 @@
 # Views
 #------------------
 
-App ?= {}
+App = {}
 
 # View(s) will be appended to this element
 App.rootElement = '#card-table'
