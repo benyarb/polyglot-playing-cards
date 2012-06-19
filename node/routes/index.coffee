@@ -2,8 +2,7 @@ models = require("../models/cards")
 
 # index
 exports.index = (req, res) ->
-  res.render "index",
-    title: "The Index"
+  res.send 'Hello, World. Express!'
   return
 
 # API

@@ -5,9 +5,7 @@
   models = require("../models/cards");
 
   exports.index = function(req, res) {
-    res.render("index", {
-      title: "The Index"
-    });
+    res.send('Hello, World. Express!');
   };
 
   exports.api = function(req, res) {
