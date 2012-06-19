@@ -24,7 +24,7 @@ app.configure "production", ->
 
 # Routes
 app.get "/", routes.index
-app.get "/api/:players([1-8])", routes.api
+app.get "/playing-cards/api/:players([1-8])", routes.api
 
 # Go
 app.listen process.env.VCAP_APP_PORT or 3000, ->
