@@ -13,6 +13,7 @@
     this.model = new models.Cards.Game(this.players);
     this.hands = this.model.deal();
     console.log(this.hands);
+    res.header('Access-Control-Allow-Origin', 'http://benyarbrough.com');
     res.send(this.hands);
   };
 

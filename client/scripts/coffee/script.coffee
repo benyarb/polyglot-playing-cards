@@ -9,7 +9,7 @@
 App = {}
 
 # View(s) will be appended to this element
-App.rootElement = '#card-table'
+App.rootElement = $('#card-table')[0]
 
 # Loop through players and hands for card display
 # <% %> ERB-style delimiters
@@ -41,6 +41,7 @@ $ ->
   $('#play').click ->
     language = $('#choose-language').val()
     players = $('#choose-players').val()
+    
     
     # Concat api url
     url = 'http://' + language + '.benyarbrough.com/playing-cards/api/' + players

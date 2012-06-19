@@ -13,5 +13,8 @@ exports.api = (req, res) ->
 
   console.log(@hands)
 
+  # Allow AJAX from client on benyarbrough.com
+  res.header('Access-Control-Allow-Origin', 'http://benyarbrough.com');
+
   res.send @hands
   return
