@@ -51,10 +51,11 @@ $ ->
       $(App.rootElement).empty()
       
       # Underscore templating: http://underscorejs.org/#template
-      table = _.template(App.rootElement, {hands : hands})
+      table = _.template(App.views, {hands : hands})
   
       # Go!
       $(App.rootElement).append(table)
 
       return
     return
+  return
