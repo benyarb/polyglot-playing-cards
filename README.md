@@ -3,10 +3,10 @@
 This is a multi-language implementation of a card deck with shuffle and deal functionality.
 
 This project was built in these languages/frameworks:
-* [Node](http://nodejs.org/) > [Express](http://expressjs.com/)
-* [Ruby](http://www.ruby-lang.org/) > [Sinatra](http://www.sinatrarb.com/)
-* [Python](http://www.python.org/) > [Flask](http://flask.pocoo.org/)
-* [PHP](http://www.php.net/) > [Slim](http://www.slimframework.com/)
+* [Node](http://nodejs.org/) -> [Express](http://expressjs.com/)
+* [Ruby](http://www.ruby-lang.org/) -> [Sinatra](http://www.sinatrarb.com/)
+* [Python](http://www.python.org/) -> [Flask](http://flask.pocoo.org/)
+* [PHP](http://www.php.net/) -> [Slim](http://www.slimframework.com/)
 * [CoffeeScript](http://coffeescript.org/)
 
 On the client-side, it makes use of several frameworks and components, including:
