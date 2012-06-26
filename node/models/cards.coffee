@@ -16,27 +16,21 @@ root.Cards = Cards = {}
 class Cards.Rank
   constructor: (@value) ->
 
-  letter: ->
-    'A23456789TJQK'.charAt(@value)
-  nextLower: ->
-    if @value is 0 then null else Cards.ranks[@value - 1]
-  nextHigher: ->
-    if @value is 12 then null else Cards.ranks[@value + 1]
+  letter: 'A23456789TJQK'.charAt(@value)
+  
 
 # Immutable singleton
 class Cards.Suit
   constructor: (@value) ->
 
-  letter: ->
-    'CDHS'.charAt(@value) # clubs, diamonds, hearts, spades
-  color: ->
-    if @letter() is 'C' or @letter() is 'S' then 'black' else 'red'
-  name: ->
-    if @letter() is 'C'
+  letter: 'CDHS'.charAt(@value) # clubs, diamonds, hearts, spades
+  color: if @letter is 'C' or @letter is 'S' then 'black' else 'red'
+  name:
+    if @letter is 'C'
       'clubs'
-    else if @letter() is 'D'
+    else if @letter is 'D'
       'diams'
-    else if @letter() is 'H'
+    else if @letter is 'H'
       'hearts'
     else
       'spades'

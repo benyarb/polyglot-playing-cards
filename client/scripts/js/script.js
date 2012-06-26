@@ -6,7 +6,7 @@
 
   App.rootElement = $('#card-table')[0];
 
-  App.view = "    <% _.each(hands, function(hand, player) { %>      <div class='well span5'>        <h2>Player <%= player + 1 %></h2>                <div class='hand'>          <% _.each(hand, function(card) { %>            <span class='card <%= card.suit.name() %>'>              <span class='rank'><%= card.rank.letter() %></span>              <span class='suit'>&<%= card.suit.name() %>;</span>            </span>          <% }); %>        </div>      </div>    <% }); %>  ";
+  App.view = "    <% _.each(hands, function(hand, player) { %>      <div class='well span5'>        <h2>Player <%= player + 1 %></h2>                <div class='hand'>          <% _.each(hand, function(card) { %>            <span class='card <%= card.suit.name %>'>              <span class='rank'><%= card.rank.letter %></span>              <span class='suit'>&<%= card.suit.name %>;</span>            </span>          <% }); %>        </div>      </div>    <% }); %>  ";
 
   $(function() {
     $('#play').click(function() {

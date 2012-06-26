@@ -21,9 +21,9 @@ App.view = "
         
         <div class='hand'>
           <% _.each(hand, function(card) { %>
-            <span class='card <%= card.suit.name() %>'>
-              <span class='rank'><%= card.rank.letter() %></span>
-              <span class='suit'>&<%= card.suit.name() %>;</span>
+            <span class='card <%= card.suit.name %>'>
+              <span class='rank'><%= card.rank.letter %></span>
+              <span class='suit'>&<%= card.suit.name %>;</span>
             </span>
           <% }); %>
         </div>

@@ -14,25 +14,7 @@
       this.value = value;
     }
 
-    Rank.prototype.letter = function() {
-      return 'A23456789TJQK'.charAt(this.value);
-    };
-
-    Rank.prototype.nextLower = function() {
-      if (this.value === 0) {
-        return null;
-      } else {
-        return Cards.ranks[this.value - 1];
-      }
-    };
-
-    Rank.prototype.nextHigher = function() {
-      if (this.value === 12) {
-        return null;
-      } else {
-        return Cards.ranks[this.value + 1];
-      }
-    };
+    Rank.prototype.letter = 'A23456789TJQK'.charAt(Rank.value);
 
     return Rank;
 
@@ -44,29 +26,11 @@
       this.value = value;
     }
 
-    Suit.prototype.letter = function() {
-      return 'CDHS'.charAt(this.value);
-    };
+    Suit.prototype.letter = 'CDHS'.charAt(Suit.value);
 
-    Suit.prototype.color = function() {
-      if (this.letter() === 'C' || this.letter() === 'S') {
-        return 'black';
-      } else {
-        return 'red';
-      }
-    };
+    Suit.prototype.color = Suit.letter === 'C' || Suit.letter === 'S' ? 'black' : 'red';
 
-    Suit.prototype.name = function() {
-      if (this.letter() === 'C') {
-        return 'clubs';
-      } else if (this.letter() === 'D') {
-        return 'diams';
-      } else if (this.letter() === 'H') {
-        return 'hearts';
-      } else {
-        return 'spades';
-      }
-    };
+    Suit.prototype.name = Suit.letter === 'C' ? 'clubs' : Suit.letter === 'D' ? 'diams' : Suit.letter === 'H' ? 'hearts' : 'spades';
 
     return Suit;
 
